@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clock and count</title>
+        <script type="text/javascript">
+            var click = 0;
+            function fun(){
+                document.getElementById('counts').innerHTML = ++click;
+                click = click;
+            }
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Stopwatch</title>
+    
+        <link rel="stylesheet" href="styles.css">
+    
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <button style="
+            padding: -1px;
+            margin: auto;
+            position: absolute;
+            top: 8%;
+            left: 32%;
+            transform: translate(-50%, -50%);
+            " id="button" class="button" onclick="fun();"><b>Solved</b></button>
+        <p style="text-align:center">Problem Solved: </p>
+        <p id="counts" style="text-align:center"></p>
+        <div class="container">
+            <div>
+                <h2>Timer</h2>
+            </div>
+
+            <div id="display">
+                00:00:00
+            </div>
+    
+            <div class="buttons">
+                <centre>
+                    <button id="startStop" onclick="startStop()">Start</button> <button id="reset" onclick="reset()">Reset</button>
+                </centre>
+
+            </div>
+    
+        </div>
+    </body>
+</html>
